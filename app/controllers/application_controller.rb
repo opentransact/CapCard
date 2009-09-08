@@ -7,9 +7,27 @@ class ApplicationController < ActionController::Base
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
   # Scrub sensitive parameters from your log
-  # filter_parameter_logging :password
+  filter_parameter_logging :pin
   
   protected
+  
+  def require_card
+    if logged_in?
+      true
+    else
+      redirect_to root_url
+      false
+    end
+  end
+  
+  def require_no_card
+    if logged_in?
+      redirect_to path_url
+      false
+    else
+      true
+    end
+  end
   
   def current_card
     @current_card||=session[:card] && Card.find_by_key( session[:card])

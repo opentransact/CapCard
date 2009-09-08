@@ -240,6 +240,7 @@ tfoot {
 caption {
   background: #eee; }
 
+
 /* line 180, ../../../app/stylesheets/partials/_buttons.sass */
 button[type=submit] {
   zoom: 1;
@@ -1070,66 +1071,6 @@ input.span-24, textarea.span-24, select.span-24 {
   background: #990000;
   color: white; }
 
-/* line 15, ../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.14/frameworks/blueprint/stylesheets/blueprint/modules/_form.sass */
-label {
-  font-weight: bold; }
-
-/* line 17, ../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.14/frameworks/blueprint/stylesheets/blueprint/modules/_form.sass */
-fieldset {
-  padding: 1.4em;
-  margin: 0 0 1.5em 0; }
-
-/* line 20, ../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.14/frameworks/blueprint/stylesheets/blueprint/modules/_form.sass */
-legend {
-  font-weight: bold;
-  font-size: 1.2em; }
-
-/* line 24, ../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.14/frameworks/blueprint/stylesheets/blueprint/modules/_form.sass */
-input.text, input.title, input[type=text] {
-  margin: 0.5em 0;
-  background-color: #fff;
-  padding: 5px; }
-/* line 28, ../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.14/frameworks/blueprint/stylesheets/blueprint/modules/_form.sass */
-input.title {
-  font-size: 1.5em; }
-/* line 30, ../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.14/frameworks/blueprint/stylesheets/blueprint/modules/_form.sass */
-input[type=checkbox], input.checkbox,
-input[type=radio], input.radio {
-  position: relative;
-  top: 0.25em; }
-
-/* line 34, ../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.14/frameworks/blueprint/stylesheets/blueprint/modules/_form.sass */
-textarea {
-  margin: 0.5em 0;
-  padding: 5px; }
-
-/* line 37, ../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.14/frameworks/blueprint/stylesheets/blueprint/modules/_form.sass */
-select {
-  margin: 0.5em 0; }
-
-/* line 48, ../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.14/frameworks/blueprint/stylesheets/blueprint/modules/_form.sass */
-fieldset {
-  border: 1px solid #cccccc; }
-
-/* line 50, ../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.14/frameworks/blueprint/stylesheets/blueprint/modules/_form.sass */
-input.text, input.title,
-textarea,
-select {
-  border: 1px solid #bbbbbb; }
-  /* line 54, ../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.14/frameworks/blueprint/stylesheets/blueprint/modules/_form.sass */
-  input.text:focus, input.title:focus,
-  textarea:focus,
-  select:focus {
-    border: 1px solid #666666; }
-
-/* line 41, ../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.14/frameworks/blueprint/stylesheets/blueprint/modules/_form.sass */
-input.text, input.title {
-  width: 300px; }
-
-/* line 43, ../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.14/frameworks/blueprint/stylesheets/blueprint/modules/_form.sass */
-textarea {
-  width: 390px;
-  height: 250px; }
 
 /* line 20, ../../../app/stylesheets/screen.sass */
 body {
@@ -1203,10 +1144,14 @@ body {
   #header ul {
     float: right; }
 
-/* line 39, ../../../app/stylesheets/screen.sass */
+/* line 40, ../../../app/stylesheets/screen.sass */
+#footer {
+  margin-top: 100px; }
+
+/* line 42, ../../../app/stylesheets/screen.sass */
 .card {
   position: relative;
-  background: #3864C7 url(/images/card_background_small.jpg) center bottom;
+  background: #3864C7 url(/images/card_background.jpg) center bottom;
   border: 2px solid white;
   display: inline;
   float: left;
@@ -1224,12 +1169,12 @@ body {
   /* line 101, ../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.14/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html .card {
     overflow-x: hidden; }
-  /* line 51, ../../../app/stylesheets/screen.sass */
+  /* line 54, ../../../app/stylesheets/screen.sass */
   .card .badge {
     position: absolute;
     top: 10px;
     right: 10px; }
-  /* line 55, ../../../app/stylesheets/screen.sass */
+  /* line 58, ../../../app/stylesheets/screen.sass */
   .card .logo {
     border-top-left-radius: 10px;
     -webkit-border-top-left-radius: 10px;
@@ -1242,7 +1187,7 @@ body {
     color: white;
     color: rgba(255,255,255,0.8);
     font-weight: normal; }
-  /* line 65, ../../../app/stylesheets/screen.sass */
+  /* line 68, ../../../app/stylesheets/screen.sass */
   .card .inside {
     width: 290px;
     border-bottom-left-radius: 10px;
@@ -1253,31 +1198,61 @@ body {
     -moz-border-radius-bottomright: 10px;
     padding: 10px;
     color: white; }
-    /* line 71, ../../../app/stylesheets/screen.sass */
+    /* line 74, ../../../app/stylesheets/screen.sass */
     .card .inside .number, .card .inside .expiry, .card .inside .name, .card .inside .member_since {
       font-family: 'consolas', 'monaco', 'bitstream vera sans mono', 'lucida console', 'andale mono', 'lucida console', monospace;
       font-size: 16px;
       font-weight: bold;
       color: rgba(255,255,255,0.8);
       text-shadow: 0 0 5px rgba(128,128,128,0.5); }
-      /* line 77, ../../../app/stylesheets/screen.sass */
-      .card .inside .number input[type=text], .card .inside .expiry input[type=text], .card .inside .name input[type=text], .card .inside .member_since input[type=text] {
-        font-family: 'consolas', 'monaco', 'bitstream vera sans mono', 'lucida console', 'andale mono', 'lucida console', monospace;
-        border: none;
-        border-bottom: 1px solid white;
-        background: none;
-        background: rgba(0,0,0,0.2);
-        font-size: 16px;
-        font-weight: bold;
-        color: white;
-        color: rgba(255,255,255,0.8); }
-    /* line 88, ../../../app/stylesheets/screen.sass */
+    /* line 81, ../../../app/stylesheets/screen.sass */
+    .card .inside input[type=text], .card .inside input[type=password] {
+      font-family: 'consolas', 'monaco', 'bitstream vera sans mono', 'lucida console', 'andale mono', 'lucida console', monospace;
+      border: none;
+      border-bottom: 1px solid white;
+      background: #3864C7;
+      background: rgba(0,0,0,0.2);
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      color: rgba(255,255,255,0.8); }
+    /* line 92, ../../../app/stylesheets/screen.sass */
     .card .inside label {
       font-family: Helvetica, Arial;
       font-size: 10px; }
 
-/* line 91, ../../../app/stylesheets/screen.sass */
+/* line 95, ../../../app/stylesheets/screen.sass */
+.or {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 70px;
+  margin: 0;
+  font-size: 3.32em;
+  line-height: 1em;
+  margin-bottom: 0.5em;
+  font-style: italic; }
+  /* line 101, ../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.14/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
+  * html .or {
+    overflow-x: hidden; }
+
+/* line 99, ../../../app/stylesheets/screen.sass */
 .logo {
   font-family: Helvetica Neue, Arial, Helvetica, sans-serif;
   color: #006;
   font-size: 36px; }
+
+/* line 103, ../../../app/stylesheets/screen.sass */
+.description {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 230px;
+  margin: 0;
+  font-size: 1.125em;
+  line-height: 1.476em;
+  margin-bottom: 1.476em;
+  color: #666; }
+  /* line 101, ../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.14/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
+  * html .description {
+    overflow-x: hidden; }

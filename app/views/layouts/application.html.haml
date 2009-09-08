@@ -13,12 +13,12 @@
     
   %body
     #container
-      #header
-        -if logged_in?
+      -if logged_in?
+        #header
           %ul
             %li
               -form_tag card_path,:method=>:delete do
-                %button{:class=>"link"} Logout
+                =positive_button "Logout"
         
       #content
         .body

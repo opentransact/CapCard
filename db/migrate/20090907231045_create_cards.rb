@@ -3,7 +3,6 @@ class CreateCards < ActiveRecord::Migration
     create_table :cards do |t|
       t.string :number,:limit=>8
       t.string :name
-      t.string :email
       t.string :key,:limit=>32
       t.string :pin, :limit=>4
       t.date :expiry

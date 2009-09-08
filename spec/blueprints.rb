@@ -12,6 +12,5 @@ Sham.body  { Faker::Lorem.paragraph }
 Sham.url { "http://#{Faker::Internet.domain_name}"}
 
 Card.blueprint do
-  email { Sham.email }
   name { Sham.name }
 end

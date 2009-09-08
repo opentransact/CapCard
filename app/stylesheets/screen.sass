@@ -5,7 +5,7 @@
 @import partials/typography.sass
 @import blueprint/modules/grid.sass
 @import blueprint/modules/utilities.sass
-@import blueprint/modules/form.sass
+#@import blueprint/modules/form.sass
 @import blueprint/modules/interaction.sass
 @import compass/utilities.sass
 @import partials/rounded.sass
@@ -15,7 +15,7 @@
 +blueprint-utilities
 +blueprint-grid
 +blueprint-interaction
-+blueprint-form
+#+blueprint-form
 
 body
   background= !background_color
@@ -36,9 +36,12 @@ body
   
   ul
     float: right
+    
+#footer
+  margin-top: 100px
 .card
   position: relative
-  background: #3864C7 url(/images/card_background_small.jpg) center bottom
+  background: #3864C7 url(/images/card_background.jpg) center bottom
   border: 2px solid white
   +column(8)
   +rounded(10px)
@@ -74,21 +77,30 @@ body
       font-weight: bold
       color: rgba(255,255,255,0.8)
       text-shadow: 0 0 5px rgba(128,128,128,0.5)
-      input[type=text]
-        font-family= !blueprint_fixed_font_family
-        border: none
-        border-bottom: 1px solid white
-        background: none
-        background: rgba(0,0,0,0.2)
-        font-size: 16px
-        font-weight: bold
-        color: white
-        color: rgba(255,255,255,0.8)
+      
+    input[type=text],input[type=password]
+      font-family= !blueprint_fixed_font_family
+      border: none
+      border-bottom: 1px solid white
+      background: #3864C7
+      background: rgba(0,0,0,0.2)
+      font-size: 16px
+      font-weight: bold
+      color: white
+      color: rgba(255,255,255,0.8)
         
     label
       font-family: Helvetica, Arial
       font-size: 10px
+.or
+  +column(2)
+  +calculate-baseline(3.32,2*!document_base_line)
+  font-style: italic
 .logo
   font-family= !blueprint_font_family
   color: #006
   font-size: 36px
+.description
+  +column(6,true)
+  +bigger
+  color: #666
