@@ -7,9 +7,10 @@ RAILS_GEM_VERSION = '2.3.4' unless defined? RAILS_GEM_VERSION
 require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
-  config.gem 'oauth', :version => '0.3.5'
-  config.gem 'thoughtbot-clearance', :lib => 'clearance', :source => 'http://gems.github.com', :version => '0.6.6'
-  config.gem 'haml', :lib => 'haml', :version => '2.2'
+  config.gem 'oauth', :version => '>=0.3.5'
+  config.gem 'haml', :lib => 'haml', :version => '>=2.2'
+  config.gem 'json'
+  
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.

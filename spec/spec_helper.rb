@@ -5,6 +5,10 @@ require File.dirname(__FILE__) + "/../config/environment" unless defined?(RAILS_
 require 'spec/autorun'
 require 'spec/rails'
 
+require File.dirname(__FILE__) + "/blueprints"
+require "email_spec/helpers"
+require "email_spec/matchers"
+
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
@@ -16,6 +20,11 @@ Spec::Runner.configure do |config|
   config.use_transactional_fixtures = true
   config.use_instantiated_fixtures  = false
   config.fixture_path = RAILS_ROOT + '/spec/fixtures/'
+
+  config.before(:each) { Sham.reset }
+  
+  config.include(EmailSpec::Helpers)
+  config.include(EmailSpec::Matchers)
 
   # == Fixtures
   #
