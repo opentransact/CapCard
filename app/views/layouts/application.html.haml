@@ -1,0 +1,44 @@
+!!! XML
+!!!
+%html{html_attrs}
+  %head
+    %title= @page_title||"CapCard"
+    
+    = stylesheet_link_tag 'compiled/screen.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'compiled/print.css', :media => 'print'
+    /[if IE]
+      = stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection'
+    %meta{:name=>"viewport",:content=>"width=700"}
+    
+    
+  %body
+    #container
+      #header
+        -if logged_in?
+          %ul
+            %li
+              -form_tag card_path,:method=>:delete do
+                %button{:class=>"link"} Logout
+        
+      #content
+        .body
+          -flash.each do |name,msg|
+            =content_tag :div, msg,:class=>'flash '+name.to_s
+          = yield
+      = yield :sidebar
+      #footer
+        .body
+          %ul
+            %li.first 
+              %a{:href=>"http://github.com/opentransact/capcard/tree/master"} CapCard GitHub
+            %li
+              %a{:href=>"http://wiki.github.com/opentransact/opentransact"} Wiki
+            %li
+              %a{:href=>"http://github.com/opentransact/opentransact/tree/master"} OpenTransact
+            %li
+              %a{:href=>"http://groups.google.com/group/agile-banking"} Mailing List
+          %p 
+            &copy; 2009 Pelle Braendgaard and 
+            =link_to "Stake Ventures Inc.","http://stakeventures.com"
+            Released under MIT License
+        

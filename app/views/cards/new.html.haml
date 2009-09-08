@@ -1,0 +1,23 @@
+%h1 Apply for your CapCard
+
+%p
+  This is a proof of concept simulation of how a 3rd party card issuer could issue cards that would work with any OpenTransact based bank account.
+
+-form_for @card,:url=>card_path do |f|
+  .card
+    .logo
+      CapCard
+    .badge
+      =positive_button "Apply"
+    .inside
+      .number_section
+        %label Number
+        %span.number XXXX XXXX
+      .expiry_section
+        %label Member since
+        %span.member_since=Time.now.year
+        %label Valid through
+        %span.expiry=1.year.from_now.to_date.to_s :cc_expiry
+      .name
+        =f.text_field :name,:length=>20
+  

@@ -1,0 +1,94 @@
+@import compass/reset.sass
+@import compass/typography
+@import partials/base.sass
+@import compass/reset.sass
+@import partials/typography.sass
+@import blueprint/modules/grid.sass
+@import blueprint/modules/utilities.sass
+@import blueprint/modules/form.sass
+@import blueprint/modules/interaction.sass
+@import compass/utilities.sass
+@import partials/rounded.sass
+@import partials/buttons.sass
+
++clean-baseline
++blueprint-utilities
++blueprint-grid
++blueprint-interaction
++blueprint-form
+
+body
+  background= !background_color
+
+#container
+  +container
+#content
+  +column(24,true)
+  padding: 1em
+  
+#header, #footer
+  +column(24,true)
+  ul
+    +horizontal-list
+    +hover-link
+#header
+  margin: 1em 0 2em 0
+  
+  ul
+    float: right
+.card
+  position: relative
+  background: #3864C7 url(/images/card_background_small.jpg) center bottom
+  border: 2px solid white
+  +column(8)
+  +rounded(10px)
+  width: 310px
+  height: 195px
+  padding: 0
+  -webkit-box-shadow: 5px 5px 10px #888
+  box-shadow: 5px 5px 10px #888
+  -moz-box-shadow: 5px 5px 10px #888
+  .badge
+    position: absolute
+    top: 10px
+    right: 10px
+  .logo
+    +rounded-top-left(10px)
+    +rounded-top-right(10px)
+  
+    padding: 30px 10px 5px 10px
+    line-height: 42px
+    color: white
+    color: rgba(255,255,255,0.8)
+    font-weight: normal
+    
+  .inside
+    width= 7*!blueprint_grid_outer_width+!blueprint_grid_margin
+    +rounded-bottom-left(10px)
+    +rounded-bottom-right(10px)
+    padding: 10px
+    color: white
+    .number,.expiry,.name,.member_since
+      font-family= !blueprint_fixed_font_family
+      font-size: 16px
+      font-weight: bold
+      color: rgba(255,255,255,0.8)
+      text-shadow: 0 0 5px rgba(128,128,128,0.5)
+      input[type=text]
+        font-family= !blueprint_fixed_font_family
+        border: none
+        border-bottom: 1px solid white
+        background: none
+        background: rgba(0,0,0,0.2)
+        font-size: 16px
+        font-weight: bold
+        color: white
+        color: rgba(255,255,255,0.8)
+        
+    label
+      font-family: Helvetica, Arial
+      font-size: 10px
+.logo
+  font-family= !blueprint_font_family
+  color: #006
+  font-size: 36px

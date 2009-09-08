@@ -1,0 +1,1 @@
+Date::DATE_FORMATS[:cc_expiry] = "%m/%y"

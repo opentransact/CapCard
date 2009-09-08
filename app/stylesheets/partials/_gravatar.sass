@@ -1,0 +1,14 @@
+=thumbnail(!size,!baseline=24px)
+  margin-bottom=(!baseline*ceil(!size/!baseline))-(!size+10) // 10px = border+padding
+  a
+    display: block
+    margin: 0
+    padding: 0
+
+    &:hover
+      img
+        border: 3px solid #666
+        padding: 2px
+  
+.gravatar
+  +thumbnail(80px)

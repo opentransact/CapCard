@@ -1,0 +1,23 @@
+%h1 Your Card
+%p
+  You have been issued the following card:
+  
+.card
+  .logo
+    CapCard
+  .inside
+    .number_section
+      %label Number
+      %span.number
+        =current_card.number[0..3]
+        =current_card.number[4..8]
+    .expiry_section
+      %label Member since
+      %span.member_since=current_card.created_at.year
+      %label Valid through
+      %span.expiry=current_card.expiry.to_s :cc_expiry
+    .name
+      =current_card.name
+    .association
+    
+    
