@@ -6,8 +6,8 @@
       =positive_button "Apply"
     .inside
       .number_section
-        %label Number
-        %span.number XXXX XXXX
+        =f.label :email
+        =f.text_field :email, :size=>25
       .expiry_section
         %label Member since
         %span.member_since=Time.now.year

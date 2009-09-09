@@ -13,4 +13,5 @@ Sham.url { "http://#{Faker::Internet.domain_name}"}
 
 Card.blueprint do
   name { Sham.name }
+  email { Sham.email }
 end

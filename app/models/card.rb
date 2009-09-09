@@ -1,7 +1,7 @@
 class Card < ActiveRecord::Base
-  validates_presence_of :name
+  validates_presence_of :name,:email
   
-  attr_accessible :name
+  attr_accessible :name,:email
   
   before_create :create_codes
   
