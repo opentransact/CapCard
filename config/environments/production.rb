@@ -26,3 +26,16 @@ config.action_view.cache_template_loading            = true
 
 # Enable threaded mode
 # config.threadsafe!
+
+HOST = "nubux.heroku.com"
+
+config.action_mailer.delivery_method = :smtp
+require "smtp_tls"
+ActionMailer::Base.smtp_settings = {
+  :enable_starttls_auto => true,
+  :address => "smtp.gmail.com",
+  :port => "587",
+  :authentication => :plain,
+  :user_name => ENV["SMTP_EMAIL"],
+  :password => ENV["SMTP_PASSWORD"]
+}
