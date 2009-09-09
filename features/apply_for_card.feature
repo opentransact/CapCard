@@ -26,6 +26,7 @@ Feature: Apply for card
     When I open the email
     Then I should see "Here is your new CapCard" in the email subject
     And I should see card cap url in the email body
+    And I should see card number in the email body
     And I should see card pin in the email body
     
     When I click the first link in the email

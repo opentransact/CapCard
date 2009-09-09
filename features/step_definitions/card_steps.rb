@@ -39,3 +39,7 @@ Then /^I should see card pin in the email body$/ do
   Then "I should see \"#{@card.pin}\" in the email body"
 end
 
+Then /^I should see card number in the email body$/ do 
+  Then "I should see \"#{@card.number}\" in the email body"
+end
+
