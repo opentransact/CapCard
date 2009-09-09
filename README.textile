@@ -1,0 +1,6 @@
+h1. CapCard
+
+This is designed as a proof of concept of creating an OpenTransact compliant payment card as described on the OpenTransact wiki here:
+
+http://wiki.github.com/opentransact/opentransact/use-cases
+

@@ -15,10 +15,9 @@
     #container
       -if logged_in?
         #header
-          %ul
-            %li
-              -form_tag card_path,:method=>:delete do
-                =positive_button "Logout"
+          .top_bar
+            -form_tag card_path,:method=>:delete do
+              =positive_button "Logout"
         
       #content
         .body
