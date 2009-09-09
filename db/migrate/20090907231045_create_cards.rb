@@ -10,6 +10,9 @@ class CreateCards < ActiveRecord::Migration
 
       t.timestamps
     end
+    
+    add_index :cards, [:number, :pin], :unique=>true
+    add_index :cards, :key, :unique=>true
   end
 
   def self.down
