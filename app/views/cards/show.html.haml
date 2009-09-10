@@ -22,11 +22,12 @@
       Your card is linked to
       = link_to OPEN_TRANSACT_NAME, OPEN_TRANSACT_URL
     %ul
-      -current_card.transactions[0..3].each do |t|
-        %li
-          %td=link_to t["to"]+' '+number_to_currency(t["amount"].to_f),t["txn_id"]
-      -if current_card.transactions.size>4
-        %li=link_to "#{current_card.transactions.size-4} more transactions",OPEN_TRANSACT_URL
+      %li.more Latest transactions
+      -current_card.transactions[0..4].each do |t|
+        %li{:class=>cycle("even", "odd")}
+          %td=transaction_link(t)
+      -if current_card.transactions.size>5
+        %li.more=link_to "#{current_card.transactions.size-5} more transactions",OPEN_TRANSACT_URL
 
   .withdrawal
     -form_tag withdrawals_path ,:method=>:post do

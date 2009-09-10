@@ -115,6 +115,18 @@ body
     +no-bullets
     margin-left: 0
     margin-bottom: 2px
+    li
+      padding: 2px
+      a
+        +hover-link
+      &.even
+        background-color: #efe
+      &.odd
+        background-color: #fee
+      &.more
+        font-weight: bold
+        a
+          text-decoration: underline
 .withdrawal
   +column(8,last)
   p
@@ -123,6 +135,10 @@ body
     margin-bottom: 2px
   form
     background: #010 url(/images/crt_background.png)
+    -webkit-box-shadow: 0 0 5px #010
+    box-shadow: 0 0 5px #010
+    -moz-box-shadow: 0 0 5px #010
+    
     +rounded(.25em)
     padding: 1em 1em 0.5em 1em
     
@@ -145,6 +161,10 @@ body
       color: #010 !important
       text-shadow: 0 0 10px rgba(0,10,0,0.5)
       padding: 2px 4px
+      -webkit-box-shadow: 0 0 5px #f0ffe0
+      box-shadow: 0 0 5px #f0ffe0
+      -moz-box-shadow: 0 0 5px #f0ffe0
+      
 
     input[type=text]
       font-size: 16px
@@ -155,6 +175,9 @@ body
       +rounded(0.15em)
       font-size: 18px
       float: right
+      
+      &:hover
+        text-decoration: underline
       
 .description
   +column(6,true)

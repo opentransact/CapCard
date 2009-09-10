@@ -1338,8 +1338,29 @@ body {
     .transactions ul li {
       list-style-type: none;
       margin-left: 0px; }
+    /* line 118, ../../../app/stylesheets/screen.sass */
+    .transactions ul li {
+      padding: 2px; }
+      /* line 120, ../../../app/stylesheets/screen.sass */
+      .transactions ul li a {
+        text-decoration: none; }
+        /* line 4, ../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.15/frameworks/compass/stylesheets/compass/utilities/links/_hover_link.sass */
+        .transactions ul li a:hover {
+          text-decoration: underline; }
+      /* line 122, ../../../app/stylesheets/screen.sass */
+      .transactions ul li.even {
+        background-color: #efe; }
+      /* line 124, ../../../app/stylesheets/screen.sass */
+      .transactions ul li.odd {
+        background-color: #fee; }
+      /* line 126, ../../../app/stylesheets/screen.sass */
+      .transactions ul li.more {
+        font-weight: bold; }
+        /* line 128, ../../../app/stylesheets/screen.sass */
+        .transactions ul li.more a {
+          text-decoration: underline; }
 
-/* line 118, ../../../app/stylesheets/screen.sass */
+/* line 130, ../../../app/stylesheets/screen.sass */
 .withdrawal {
   display: inline;
   float: left;
@@ -1348,7 +1369,7 @@ body {
   /* line 101, ../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html .withdrawal {
     overflow-x: hidden; }
-  /* line 120, ../../../app/stylesheets/screen.sass */
+  /* line 132, ../../../app/stylesheets/screen.sass */
   .withdrawal p {
     margin: 0;
     font-size: 0.8em;
@@ -1356,49 +1377,58 @@ body {
     margin-bottom: 2.075em;
     color: #666;
     margin-bottom: 2px; }
-  /* line 124, ../../../app/stylesheets/screen.sass */
+  /* line 136, ../../../app/stylesheets/screen.sass */
   .withdrawal form {
     background: #010 url(/images/crt_background.png);
+    -webkit-box-shadow: 0 0 5px #010;
+    box-shadow: 0 0 5px #010;
+    -moz-box-shadow: 0 0 5px #010;
     border-radius: 0.25em;
     -webkit-border-radius: 0.25em;
     -moz-border-radius: 0.25em;
     padding: 1em 1em 0.5em 1em; }
-    /* line 129, ../../../app/stylesheets/screen.sass */
+    /* line 145, ../../../app/stylesheets/screen.sass */
     .withdrawal form input[type=text], .withdrawal form label, .withdrawal form legend, .withdrawal form button {
       font-family: 'consolas', 'monaco', 'bitstream vera sans mono', 'lucida console', 'andale mono', 'lucida console', monospace; }
-    /* line 132, ../../../app/stylesheets/screen.sass */
+    /* line 148, ../../../app/stylesheets/screen.sass */
     .withdrawal form legend, .withdrawal form label {
       font-size: 16px;
       color: rgb(250,255,245);
       color: rgba(250,255,245,0.8);
       text-shadow: 0 0 10px rgba(250,255,245,0.5); }
-    /* line 138, ../../../app/stylesheets/screen.sass */
+    /* line 154, ../../../app/stylesheets/screen.sass */
     .withdrawal form legend {
       font-size: 1.5em;
       font-weight: bold; }
-    /* line 142, ../../../app/stylesheets/screen.sass */
+    /* line 158, ../../../app/stylesheets/screen.sass */
     .withdrawal form input[type=text], .withdrawal form button {
       border: 0;
       background: #f0ffe0 url(/images/crt_highlight.png);
       color: #010 !important;
       text-shadow: 0 0 10px rgba(0,10,0,0.5);
-      padding: 2px 4px; }
-    /* line 149, ../../../app/stylesheets/screen.sass */
+      padding: 2px 4px;
+      -webkit-box-shadow: 0 0 5px #f0ffe0;
+      box-shadow: 0 0 5px #f0ffe0;
+      -moz-box-shadow: 0 0 5px #f0ffe0; }
+    /* line 169, ../../../app/stylesheets/screen.sass */
     .withdrawal form input[type=text] {
       font-size: 16px;
       border-radius: 0.15em;
       -webkit-border-radius: 0.15em;
       -moz-border-radius: 0.15em;
       text-align: right; }
-    /* line 154, ../../../app/stylesheets/screen.sass */
+    /* line 174, ../../../app/stylesheets/screen.sass */
     .withdrawal form button {
       border-radius: 0.15em;
       -webkit-border-radius: 0.15em;
       -moz-border-radius: 0.15em;
       font-size: 18px;
       float: right; }
+      /* line 179, ../../../app/stylesheets/screen.sass */
+      .withdrawal form button:hover {
+        text-decoration: underline; }
 
-/* line 159, ../../../app/stylesheets/screen.sass */
+/* line 182, ../../../app/stylesheets/screen.sass */
 .description {
   display: inline;
   float: left;
