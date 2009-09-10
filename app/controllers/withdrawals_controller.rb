@@ -4,9 +4,9 @@ class WithdrawalsController < ApplicationController
   def create
     begin
       @transact=JSON.parse(current_card.client.post("/transacts",{:amount=>params[:amount],:memo=>"Withdrawal",:to=>OPERATOR_ACCOUNT},{'Accept'=>'application/json'}).body)
-      flash[:notice] = "You successfully withdrew #{@transact['amount']}" if transact["status"]=="ok"
+      flash[:notice] = "You successfully withdrew #{@transact['amount']}" if @transact["status"]=="ok"
     rescue
-      flash[:error]="Something went wrong"
+      flash[:error]="Something went wrong #{$!}"
     end
     redirect_to card_path
   end
