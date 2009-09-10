@@ -1,6 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
   map.resource :card
+  
   map.resources :withdrawals
+  
   map.login "/login",:controller=>"cards",:action=>"login",:conditions => { :method => :post }
   map.cap "/cap/:id",:controller=>"cards",:action=>"cap",:conditions => { :method => :get }
   map.oauth "/oauth",:controller=>"oauth",:action=>"show",:conditions => { :method => :get }

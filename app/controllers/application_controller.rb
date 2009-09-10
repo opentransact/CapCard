@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
   
   def require_no_card
     if logged_in?
-      redirect_to path_url
+      redirect_to card_path
       false
     else
       true
