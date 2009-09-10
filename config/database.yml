@@ -47,8 +47,8 @@ production:
   encoding: unicode
   database: capcard_production
   pool: 5
-  username: capcard
-  password:
+#  username: capcard
+#  password:
 
 cucumber:
   <<: *TEST
