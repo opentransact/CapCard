@@ -18,11 +18,11 @@
           .top_bar
             -form_tag card_path,:method=>:delete do
               =positive_button "Logout"
+          -flash.each do |name,msg|
+            =content_tag :div, msg,:class=>'flash '+name.to_s
         
       #content
         .body
-          -flash.each do |name,msg|
-            =content_tag :div, msg,:class=>'flash '+name.to_s
           = yield
       = yield :sidebar
       #footer

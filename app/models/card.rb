@@ -7,6 +7,9 @@ class Card < ActiveRecord::Base
   
   after_create :send_credentials
   
+  include OpenTransact
+  
+  
   protected
   
   def create_codes

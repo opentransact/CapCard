@@ -103,6 +103,59 @@ body
   font-family= !blueprint_font_family
   color: #006
   font-size: 36px
+
+.transactions
+  +column(7)
+  p
+    +bigger
+    color: #666
+    margin-bottom: 2px
+    
+  ul
+    +no-bullets
+    margin-left: 0
+    margin-bottom: 2px
+.withdrawal
+  +column(8,last)
+  p
+    +smaller
+    color: #666
+    margin-bottom: 2px
+  form
+    background: #010 url(/images/crt_background.png)
+    +rounded(.25em)
+    padding: 1em 1em 0.5em 1em
+    
+    input[type=text],label,legend,button
+      font-family= !blueprint_fixed_font_family
+      
+    legend,label
+      font-size: 16px
+      color: rgb(250,255,245)
+      color: rgba(250,255,245,0.8)
+      text-shadow: 0 0 10px rgba(250,255,245,0.5)
+    
+    legend
+      font-size: 1.5em
+      font-weight: bold
+    
+    input[type=text],button
+      border: 0
+      background: #f0ffe0 url(/images/crt_highlight.png)
+      color: #010 !important
+      text-shadow: 0 0 10px rgba(0,10,0,0.5)
+      padding: 2px 4px
+
+    input[type=text]
+      font-size: 16px
+      +rounded(0.15em)
+      text-align: right
+    
+    button
+      +rounded(0.15em)
+      font-size: 18px
+      float: right
+      
 .description
   +column(6,true)
   +bigger

@@ -34,3 +34,8 @@ config.gem "cucumber", :lib => false, :version => ">=0.3.94"
 config.gem 'bmabey-email_spec', :lib => 'email_spec'
 config.gem "faker"
 config.gem "notahat-machinist", :lib => 'machinist', :source => 'http://gems.github.com'
+
+OPEN_TRANSACT_NAME="NuBux"
+OPEN_TRANSACT_URL="http://nubux.dev"
+OPEN_TRANSACT_CONSUMER_KEY="Bdstb50Plic5lPN0Ste88w"
+OPEN_TRANSACT_CONSUMER_SECRET="tY5mKvKs5xhNtcoLNdou6aOagK0p0Nqq29dwpTtwXc"

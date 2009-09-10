@@ -322,6 +322,75 @@ button[type=submit] {
   *:first-child+html button[type=submit][type] {
     padding: 4px 10px 3px 7px; }
 
+/* line 184, ../../../app/stylesheets/partials/_buttons.sass */
+a.button {
+  zoom: 1;
+  display: inline;
+  display: -moz-inline-box;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0.7em 0.5em 0.7em 0;
+  border-width: 1px;
+  border-style: solid;
+  font-family: Helvetica Neue, Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  line-height: 130%;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  border-color: #eeeeee #dedede #dedede #eeeeee;
+  color: #565656;
+  padding: 5px 10px 5px 7px; }
+  /* line 125, ../../../app/stylesheets/partials/_buttons.sass */
+  a.button img {
+    margin: 0 3px -3px 0 !important;
+    padding: 0;
+    border: none;
+    width: 16px;
+    height: 16px;
+    float: none; }
+  /* line 75, ../../../app/stylesheets/partials/_buttons.sass */
+  a.button.positive {
+    background-color: #ddffdd;
+    border-color: #dcfedc #cceecc #cceecc #dcfedc;
+    color: #006600; }
+    /* line 77, ../../../app/stylesheets/partials/_buttons.sass */
+    a.button.positive:active {
+      background-color: #66ff66;
+      border-color: #54fe54 #44ee44 #44ee44 #54fe54;
+      color: white; }
+    /* line 79, ../../../app/stylesheets/partials/_buttons.sass */
+    a.button.positive:hover {
+      background-color: #bbffbb;
+      border-color: #bafeba #aaeeaa #aaeeaa #bafeba;
+      color: #006600; }
+  /* line 87, ../../../app/stylesheets/partials/_buttons.sass */
+  a.button.negative {
+    background-color: #ffdddd;
+    border-color: #fedcdc #eecccc #eecccc #fedcdc;
+    color: #660000; }
+    /* line 89, ../../../app/stylesheets/partials/_buttons.sass */
+    a.button.negative:active {
+      background-color: #ff6666;
+      border-color: #fe5454 #ee4444 #ee4444 #fe5454;
+      color: white; }
+    /* line 91, ../../../app/stylesheets/partials/_buttons.sass */
+    a.button.negative:hover {
+      background-color: #ffbbbb;
+      border-color: #febaba #eeaaaa #eeaaaa #febaba;
+      color: #660000; }
+  /* line 99, ../../../app/stylesheets/partials/_buttons.sass */
+  a.button:active {
+    background-color: #6299c5;
+    border-color: #72a9d5 #6299c5 #6299c5 #72a9d5;
+    color: white; }
+  /* line 107, ../../../app/stylesheets/partials/_buttons.sass */
+  a.button:hover {
+    background-color: #dff4ff;
+    border-color: #d2f1ff #c2e1ef #c2e1ef #d2f1ff;
+    color: #336699; }
+
 /* line 25, ../../../app/stylesheets/partials/_baseline.sass */
 body {
   font-size: !baseline_size;
@@ -1244,7 +1313,92 @@ body {
   color: #006;
   font-size: 36px; }
 
-/* line 106, ../../../app/stylesheets/screen.sass */
+/* line 107, ../../../app/stylesheets/screen.sass */
+.transactions {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 270px; }
+  /* line 101, ../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
+  * html .transactions {
+    overflow-x: hidden; }
+  /* line 109, ../../../app/stylesheets/screen.sass */
+  .transactions p {
+    margin: 0;
+    font-size: 1.125em;
+    line-height: 1.476em;
+    margin-bottom: 1.476em;
+    color: #666;
+    margin-bottom: 2px; }
+  /* line 114, ../../../app/stylesheets/screen.sass */
+  .transactions ul {
+    margin-left: 0;
+    margin-bottom: 2px; }
+    /* line 8, ../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.15/frameworks/compass/stylesheets/compass/utilities/lists/_bullets.sass */
+    .transactions ul li {
+      list-style-type: none;
+      margin-left: 0px; }
+
+/* line 118, ../../../app/stylesheets/screen.sass */
+.withdrawal {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 310px; }
+  /* line 101, ../../../../../../../Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.15/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
+  * html .withdrawal {
+    overflow-x: hidden; }
+  /* line 120, ../../../app/stylesheets/screen.sass */
+  .withdrawal p {
+    margin: 0;
+    font-size: 0.8em;
+    line-height: 2.075em;
+    margin-bottom: 2.075em;
+    color: #666;
+    margin-bottom: 2px; }
+  /* line 124, ../../../app/stylesheets/screen.sass */
+  .withdrawal form {
+    background: #010 url(/images/crt_background.png);
+    border-radius: 0.25em;
+    -webkit-border-radius: 0.25em;
+    -moz-border-radius: 0.25em;
+    padding: 1em 1em 0.5em 1em; }
+    /* line 129, ../../../app/stylesheets/screen.sass */
+    .withdrawal form input[type=text], .withdrawal form label, .withdrawal form legend, .withdrawal form button {
+      font-family: 'consolas', 'monaco', 'bitstream vera sans mono', 'lucida console', 'andale mono', 'lucida console', monospace; }
+    /* line 132, ../../../app/stylesheets/screen.sass */
+    .withdrawal form legend, .withdrawal form label {
+      font-size: 16px;
+      color: rgb(250,255,245);
+      color: rgba(250,255,245,0.8);
+      text-shadow: 0 0 10px rgba(250,255,245,0.5); }
+    /* line 138, ../../../app/stylesheets/screen.sass */
+    .withdrawal form legend {
+      font-size: 1.5em;
+      font-weight: bold; }
+    /* line 142, ../../../app/stylesheets/screen.sass */
+    .withdrawal form input[type=text], .withdrawal form button {
+      border: 0;
+      background: #f0ffe0 url(/images/crt_highlight.png);
+      color: #010 !important;
+      text-shadow: 0 0 10px rgba(0,10,0,0.5);
+      padding: 2px 4px; }
+    /* line 149, ../../../app/stylesheets/screen.sass */
+    .withdrawal form input[type=text] {
+      font-size: 16px;
+      border-radius: 0.15em;
+      -webkit-border-radius: 0.15em;
+      -moz-border-radius: 0.15em;
+      text-align: right; }
+    /* line 154, ../../../app/stylesheets/screen.sass */
+    .withdrawal form button {
+      border-radius: 0.15em;
+      -webkit-border-radius: 0.15em;
+      -moz-border-radius: 0.15em;
+      font-size: 18px;
+      float: right; }
+
+/* line 159, ../../../app/stylesheets/screen.sass */
 .description {
   display: inline;
   float: left;

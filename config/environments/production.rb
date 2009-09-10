@@ -27,7 +27,7 @@ config.action_view.cache_template_loading            = true
 # Enable threaded mode
 # config.threadsafe!
 
-HOST = "nubux.heroku.com"
+HOST = "capcard.heroku.com"
 
 config.action_mailer.delivery_method = :smtp
 require "smtp_tls"
@@ -39,3 +39,8 @@ ActionMailer::Base.smtp_settings = {
   :user_name => ENV["SMTP_EMAIL"],
   :password => ENV["SMTP_PASSWORD"]
 }
+
+OPEN_TRANSACT_NAME="NuBux"
+OPEN_TRANSACT_URL="https://nubux.heroku.dev"
+OPEN_TRANSACT_CONSUMER_KEY=ENV["OPEN_TRANSACT_CONSUMER_KEY"]
+OPEN_TRANSACT_CONSUMER_SECRET=ENV["OPEN_TRANSACT_CONSUMER_SECRET"]
