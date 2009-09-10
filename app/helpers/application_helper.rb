@@ -8,6 +8,6 @@ module ApplicationHelper
       counterparty=t["memo"]
     end
     amount=t['amount'].to_f*(t['to']==current_card.email ? 1 : -1 )
-    link_to "#{counterparty} - #{number_to_currency(amount)}",t["txn_id"]
+    link_to "#{counterparty} #{number_to_currency(amount)}",t["txn_id"]
   end
 end
