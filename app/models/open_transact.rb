@@ -53,6 +53,10 @@ module OpenTransact
       @transactions||=JSON.parse(client.get("/transacts.json").body)
     end
     
+    def withdraw(amount)
+      JSON.parse(client.post("/transacts",{:amount=>amount,:memo=>"Withdrawal",:to=>OPERATOR_ACCOUNT},{'Accept'=>'application/json'}).body)
+    end
+    
   end
   
 end
